@@ -174,3 +174,20 @@ nav.footer ul a {
 nav.footer ul a:hover {
     color: blue;
 }
+
+@media screen and (max-width: 600px) {
+    h1, h2, h3 {
+        color: brown;
+    }
+
+    header{
+        flex-direction: column;
+    }
+  h1 {
+    margin-bottom: 10px;
+  }
+  
+  header nav ul li {
+    flex-direction: column;
+  }
+} 
