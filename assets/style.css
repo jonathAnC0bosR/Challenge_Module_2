@@ -1,5 +1,6 @@
 * {
     font-size: 17px;
+    text-decoration: ;
 }
 
 :root {
@@ -9,6 +10,11 @@
 main {
     background-co
 }
+
+a {
+    text-decoration: none;
+}
+
 
 header {
     display: flex;
@@ -24,15 +30,13 @@ header h1 {
     font-family: var(--font);
 }
 
-nav ul {
+nav ul#header {
     display: flex;
     justify-content: flex-end;
     
 }
 
-nav a {
-    text-decoration: none;
-    display: flex;
+nav ul#header li a {
     margin: 6px;
     color: antiquewhite;
     font-size: 110%;
@@ -41,7 +45,7 @@ nav a {
     padding-bottom: 5px;
 }
 
-nav a:hover {
+nav ul#header a:hover {
     color: black;
 }
 
@@ -86,11 +90,16 @@ section h2 {
 
 #left-side {
     display: flex;
-    justify-content: flex-end;
+    flex-direction: row-reverse;
     border-right: 2px solid rgb(156, 156, 199);
     font-size: 28px;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     padding-right: 20px;
+}
+
+h3 {
+    font-size: 150%;
+    color: blueviolet;
 }
 
 p {
@@ -103,22 +112,65 @@ p {
     display: grid;
     grid-template-columns: auto auto;  
     row-gap: 10px;  
+    column-gap: 15px;
 }
 
 .top-image {
     grid-column: 1 / span 2;
     background-image: url(../assets/Images/Space.jpg);
-    height: 350px;
-    margin-bottom: 25px;
+    height: 380px;
     display: flex;
     align-items: flex-end;
 }
- 
 
-span.titles {
-    background-color: aquamarine;
+.top-image ul  {
+    text-decoration: none;
+    background-color: lightyellow;
     font-size: 20px;
-    margin-left: 20px;
+    margin: 0 0 20px 5px;
+    padding: 5px;
 }
 
+.top-image a {
+    color: black;
+}
 
+.top-image a:hover {
+    color: blue;
+    text-decoration: underline;
+}
+
+.top-left {
+    background-image: url(../assets/Images/Person_walking.jpeg) ;
+    height: 150px;
+}
+
+.top-right {
+    background-image: url(../assets/Images/purple.jpg) ;
+}
+
+.bottom-left {
+    height: 150px;
+    background-image: url(..//assets/Images/Deutsch.jpeg);
+}
+
+.bottom-right {
+    background-image: url(..//assets/Images/Blue.jpeg);
+}
+
+div.grid-item#footer {
+    display: flex;
+    align-items:  center;
+    justify-content: space-around;
+}
+
+nav.footer ul a {
+    margin: 20px;
+    color: black;
+    border-bottom:  1px solid blue;
+    padding-bottom: 5px;
+}
+
+nav.footer ul a:hover {
+    color: blue;
+}
