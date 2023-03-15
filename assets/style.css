@@ -7,10 +7,6 @@
     --font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;   
 }
 
-main {
-    background-co
-}
-
 a {
     text-decoration: none;
 }
@@ -22,6 +18,7 @@ header {
     justify-content: space-between;
     background-color: darkcyan;
     padding: 30px;   
+    flex-wrap: wrap;
 }
 
 header h1 {
@@ -175,19 +172,54 @@ nav.footer ul a:hover {
     color: blue;
 }
 
-@media screen and (max-width: 600px) {
+
+@media screen and (max-width: 425px) {
+    
+    *{
+        
+    }
+    
     h1, h2, h3 {
         color: brown;
+        
     }
 
-    header{
+    nav ul#header {
         flex-direction: column;
     }
-  h1 {
+   
+    h1 {
     margin-bottom: 10px;
+    margin-right: 20px ;
   }
-  
-  header nav ul li {
-    flex-direction: column;
-  }
-} 
+
+   header {
+    justify-content: center;
+   }
+   
+   li {
+    margin: 10px;
+   }
+   
+   .grid-container {
+     max-width: 425px;
+     display: grid;
+     grid-template-columns: auto; 
+   }
+
+   div#left-side.grid-item {
+    justify-content: center;
+   }
+   
+   
+}
+
+@media screen and (max-width: 768px) {
+
+    div.grid-item {
+        display: flex;
+        flex-wrap: nowrap;
+    }
+}
+   
+
