@@ -107,10 +107,11 @@ p {
 
 #nested-grid {
     display: grid;
-    grid-template-columns: auto auto;  
+    grid-template-columns: 1fr 1fr;  
     row-gap: 10px;  
     column-gap: 15px;
 }
+
 
 .grid-item#about-me {
     display: grid;
@@ -124,6 +125,11 @@ div.profile-photo img{
     
 }
 
+ul.banner {
+    position: absolute;
+    z-index: 1;
+    background-color: aliceblue;
+}
 
 .top-image {
     grid-column: 1 / span 2;
@@ -131,15 +137,20 @@ div.profile-photo img{
     height: 380px;
     display: flex;
     align-items: flex-end;
-    opacity: 1;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
-.top-image:hover {
-    opacity: 50%;
+ .top-image:hover {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2)), url(../assets/Images/Space.jpg);
+} 
+
+.top-image:hover ul {
+    z-index: 1;
 }
 
-.profile-photo {
-    width: fit-content;
+div.profile-photo {
+    display: flex;
+    justify-content: center;
 }
 
 .top-image ul, .top-left ul, 
@@ -149,6 +160,7 @@ div.profile-photo img{
     background-color: lightyellow;
     font-size: 20px;
     margin: 0 0 20px 5px;
+    z-index: 1;
 }
 
 .top-image a, .top-left a, 
@@ -169,7 +181,10 @@ div.profile-photo img{
     height: 150px;
     display: flex;
     align-items: flex-end;
-    opacity: 1;
+}
+
+.top-left:hover {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2)), url(../assets/Images/Person_walking.jpeg);
 }
 
 .top-right {
@@ -179,6 +194,10 @@ div.profile-photo img{
     height: 150px;
 }
 
+.top-right:hover {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2)), url(../assets/Images/purple.jpg);
+}
+
 .bottom-left {
     height: 150px;
     background-image: url(..//assets/Images/Deutsch.jpeg);
@@ -186,11 +205,20 @@ div.profile-photo img{
     align-items: flex-end;
 }
 
+.bottom-left:hover {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2)), url(../assets/Images/Deutsch.jpeg);
+}
+
 .bottom-right {
     background-image: url(..//assets/Images/Blue.jpeg);
     display: flex;
     align-items: flex-end;
     height: 150px;
+    
+}
+
+.bottom-right:hover {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2)), url(../assets/Images/Blue.jpeg);
 }
 
 nav.footer ul li {
@@ -295,7 +323,8 @@ nav.footer ul a:hover {
 
    .grid-item#about-me {
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
+    align-items: center;
 }
 
    div#nested-grid {
@@ -305,7 +334,7 @@ nav.footer ul a:hover {
     
    div.profile-photo {
     display: flex;    
-    justify-content:  center;
+    justify-content: center;
     }
 
     img {
