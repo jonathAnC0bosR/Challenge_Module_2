@@ -112,27 +112,54 @@ p {
     column-gap: 15px;
 }
 
+.grid-item#about-me {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    column-gap: 10px;
+}
+
+div.profile-photo img{
+    width: 216px;
+    height: 274px;
+    
+}
+
+
 .top-image {
     grid-column: 1 / span 2;
     background-image: url(../assets/Images/Space.jpg);
     height: 380px;
     display: flex;
     align-items: flex-end;
+    opacity: 1;
 }
 
-.top-image ul  {
+.top-image:hover {
+    opacity: 50%;
+}
+
+.profile-photo {
+    width: fit-content;
+}
+
+.top-image ul, .top-left ul, 
+.top-right ul, .bottom-left ul, 
+.bottom-right ul {
     text-decoration: none;
     background-color: lightyellow;
     font-size: 20px;
     margin: 0 0 20px 5px;
-    padding: 5px;
 }
 
-.top-image a {
-    color: black;
+.top-image a, .top-left a, 
+.top-right a, .bottom-left a, 
+.bottom-right a{
+    color: black
 }
 
-.top-image a:hover {
+.top-image a:hover, .top-left a:hover, 
+.top-right a:hover, .bottom-left a:hover, 
+.bottom-right a:hover {
     color: blue;
     text-decoration: underline;
 }
@@ -140,24 +167,35 @@ p {
 .top-left {
     background-image: url(../assets/Images/Person_walking.jpeg) ;
     height: 150px;
+    display: flex;
+    align-items: flex-end;
+    opacity: 1;
 }
 
 .top-right {
     background-image: url(../assets/Images/purple.jpg) ;
+    display: flex;
+    align-items: flex-end;
+    height: 150px;
 }
 
 .bottom-left {
     height: 150px;
     background-image: url(..//assets/Images/Deutsch.jpeg);
+    display: flex;
+    align-items: flex-end;
 }
 
 .bottom-right {
     background-image: url(..//assets/Images/Blue.jpeg);
+    display: flex;
+    align-items: flex-end;
+    height: 150px;
 }
 
-div.grid-item#footer {
+nav.footer ul li {
     display: flex;
-    align-items:  center;
+    align-items: center ;
     justify-content: space-around;
 }
 
@@ -172,12 +210,60 @@ nav.footer ul a:hover {
     color: blue;
 }
 
+@media screen and (max-width:661px) {
+  
+    header {
+        display: flex;
+        justify-content: center;
+    }
+
+    header h1 {
+        margin-bottom: 10px;
+    }
+   
+    header li {
+        margin: 10px;
+    }
+
+    .grid-item#about-me {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .grid-container {
+        max-width: 661px;
+        display: grid;
+        grid-template-columns: auto; 
+      }
+    
+      div#nested-grid {
+        display: flex;
+        flex-direction: column;
+       }
+     
+    div#left-side.grid-item {
+        display: flex;
+        justify-content: center;
+    }
+
+    div.profile-photo {
+        display: flex;    
+        justify-content:  center;
+        margin-top: 10px;
+        }
+
+    
+}
+
+@media screen and (max-width: 485px) {
+    nav ul#header {
+        flex-direction: column;
+    }
+}
+
 
 @media screen and (max-width: 425px) {
     
-    *{
-        
-    }
     
     h1, h2, h3 {
         color: brown;
@@ -207,19 +293,88 @@ nav.footer ul a:hover {
      grid-template-columns: auto; 
    }
 
+   .grid-item#about-me {
+    display: flex;
+    flex-direction: column;
+}
+
+   div#nested-grid {
+    display: flex;
+    flex-direction: column;
+   }
+    
+   div.profile-photo {
+    display: flex;    
+    justify-content:  center;
+    }
+
+    img {
+        margin: 10px;
+    }
    div#left-side.grid-item {
     justify-content: center;
    }
    
+   nav.footer ul li {
+    flex-direction: column;
+   }
    
 }
 
 @media screen and (max-width: 768px) {
 
-    div.grid-item {
+    nav.footer ul li {
         display: flex;
-        flex-wrap: nowrap;
+        flex-direction: column;
+    }
+
+}
+
+@media screen and (max-width: 390px) {
+
+    section.back-image  {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+    }
+
+    span.subtitle {
+        margin-bottom: 50px;
+    }
+    
+}
+
+@media screen and (max-width: 320px) {
+
+    h1.name {
+        display: flex;
+        justify-content: center;
+        margin-left: 58px;
+    }
+
+    section.back-image  {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+    }
+
+    /* Why I can´t center it? */
+    span.subtitle { 
+        margin-bottom: 50px;
+    }
+
+     a {
+        font-size: 13px;
+        
+    }
+
+    div.profile-photo {
+        display: flex;
+        justify-content: center;
     }
 }
-   
 
+
+    
