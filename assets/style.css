@@ -1,12 +1,14 @@
+/* The rules applied under this selector will apply to al the page */
 * {
     font-size: 17px;
-    text-decoration: ;
 }
 
+/* :root selector allowa us to create variables */
 :root {
     --font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;   
 }
 
+/* This is telling all the a links to not be by any means decorated */
 a {
     text-decoration: none;
 }
@@ -18,7 +20,6 @@ header {
     justify-content: space-between;
     background-color: darkcyan;
     padding: 30px;   
-    /* position: fixed; */
 }
 
 header h1 {
@@ -42,6 +43,7 @@ nav ul#header li a {
     padding-bottom: 5px;
 }
 
+/* This selector will make the letter color black when we hover over it */
 nav ul#header a:hover {
     color: black;
 }
@@ -73,6 +75,10 @@ section h2 {
     font-family: var(--font);
 }
 
+
+/* This class will display the grid elements, with the width of the columns equal to 
+1fr 2fr. This values divide the screen into 2, making the 2fr part 2 times bigger than the 1fr.
+The grid section has a column and row gap of 20px */
 .grid-container {
     display: grid;
     grid-template-columns:  1fr 2fr;
@@ -113,6 +119,7 @@ p {
 }
 
 
+/* This is telling us that the columns will behave same as the last columns but inverted.  */
 .grid-item#about-me {
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -125,12 +132,15 @@ div.profile-photo img{
     
 }
 
+/* z-index=1 tells us that it will be on top of everything */
 ul.banner {
     position: absolute;
     z-index: 1;
     background-color: aliceblue;
 }
 
+
+/* The span is telling us that the column will expand from line 1 to line 2.  */
 .top-image {
     grid-column: 1 / span 2;
     background-image: url(../assets/Images/Space.jpg);
@@ -140,13 +150,10 @@ ul.banner {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
+/* This gives an opacity effect to the background image and is applied to al banner images */
  .top-image:hover {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2)), url(../assets/Images/Space.jpg);
 } 
-
-/* .top-image:hover ul {
-    z-index: 1;
-} */
 
 div.profile-photo {
     display: flex;
@@ -241,6 +248,7 @@ nav.footer ul a:hover {
 
 @media screen and (max-width:661px) {
   
+    /* With flex wrap we assure the header will jump a line if the content does not fit in one simple line */
     header {
         display: flex;
         justify-content: center;
@@ -391,7 +399,6 @@ nav.footer ul a:hover {
         
     }
 
-    /* Why I can´t center it? */
     span.subtitle { 
         margin-bottom: 50px;
     }
