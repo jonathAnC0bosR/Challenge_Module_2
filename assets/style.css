@@ -18,7 +18,7 @@ header {
     justify-content: space-between;
     background-color: darkcyan;
     padding: 30px;   
-    flex-wrap: wrap;
+    /* position: fixed; */
 }
 
 header h1 {
@@ -144,9 +144,9 @@ ul.banner {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2)), url(../assets/Images/Space.jpg);
 } 
 
-.top-image:hover ul {
+/* .top-image:hover ul {
     z-index: 1;
-}
+} */
 
 div.profile-photo {
     display: flex;
@@ -157,10 +157,11 @@ div.profile-photo {
 .top-right ul, .bottom-left ul, 
 .bottom-right ul {
     text-decoration: none;
-    background-color: lightyellow;
+    background-color: blanchedalmond;
     font-size: 20px;
     margin: 0 0 20px 5px;
     z-index: 1;
+    
 }
 
 .top-image a, .top-left a, 
@@ -307,21 +308,21 @@ nav.footer ul a:hover {
     margin-right: 20px ;
   }
 
-   header {
+    header {
     justify-content: center;
    }
    
-   li {
+    li {
     margin: 10px;
    }
-   
-   .grid-container {
+
+    .grid-container {
      max-width: 425px;
      display: grid;
      grid-template-columns: auto; 
    }
 
-   .grid-item#about-me {
+    .grid-item#about-me {
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
